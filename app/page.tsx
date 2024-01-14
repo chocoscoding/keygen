@@ -2,10 +2,13 @@ import Image from "next/image";
 import Client from "./Client";
 import MyMarquee from "./components/MyMarquee";
 import Link from "next/link";
+import { promisify } from "util";
+import { randomBytes } from "crypto";
+const randomBytesAsync = promisify(randomBytes);
 
 export default async function Home() {
-  const generateApi = await fetch(process.env.SITEURL + "/api/generate/" + 32);
-  const response = await generateApi.json();
+  
+  const randomString = (await randomBytesAsync(Math.ceil(length / 2))).toString("hex").slice(0, length);
 
   const styledText =
     "text-indigo-500  tablet:text-[60px] pcmini:text-[70px] mobile:text-[35px] text-[20px] font-normal nycd leading-[40px] tablet:leading-[90px] pcmini:leading-[113px] mx-3";
@@ -23,7 +26,7 @@ export default async function Home() {
       <section className="w-full max-w-[1005px] m-auto z-10 relative">
         <div className="top"></div>
         <section>
-          <Client data={response.key} />
+          <Client data={randomString} />
         </section>
       </section>
 

@@ -1,4 +1,3 @@
-import { send } from "micro";
 import { promisify } from "util";
 import { randomBytes } from "crypto";
 import { NextResponse } from "next/server";
