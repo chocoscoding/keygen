@@ -7,8 +7,8 @@ import { randomBytes } from "crypto";
 const randomBytesAsync = promisify(randomBytes);
 
 export default async function Home() {
-  
-  const randomString = (await randomBytesAsync(Math.ceil(length / 2))).toString("hex").slice(0, 32);
+  const length = 32;
+  const randomString = (await randomBytesAsync(Math.ceil(length / 2))).toString("hex").slice(0, length);
 
   const styledText =
     "text-indigo-500  tablet:text-[60px] pcmini:text-[70px] mobile:text-[35px] text-[20px] font-normal nycd leading-[40px] tablet:leading-[90px] pcmini:leading-[113px] mx-3";
