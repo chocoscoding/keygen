@@ -1,7 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Salsa&family=Sriracha&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&family=Salsa&family=Sriracha&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -17,11 +18,19 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #fff;
+}
+
+.textstroke {
+  color: #6366f1;
+  -webkit-text-fill-color: 6366F1; /* Will override color (regardless of order) */
+  -webkit-text-stroke: 1px white;
+  letter-spacing: 1.4px;
+  font-size: 24px;
+  /* font-family: "Salsa", cursive; */
+  user-select: none;
+}
+
+.nycd {
+  font-family: "Nothing You Could Do", cursive;
 }
