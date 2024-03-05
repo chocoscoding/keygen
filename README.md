@@ -7,4 +7,4 @@ Welcome to the Secret Key Generator Website! This web application provides a sec
 
 Happy generating! 🗝️
 
-🫱 [go to site](https://secret-key-gen.vercel.app) with your browser to see the result.
+🫱 [go to site](https://secretkeygen.vercel.app) with your browser to see the result.
